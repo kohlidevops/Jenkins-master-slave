@@ -53,7 +53,54 @@ Create First Admin User or Skip the step [If you want to use this Jenkins instan
 
 <img width="990" alt="215959757-403246c8-e739-4103-9265-6bdab418013e" src="https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/c72a064f-4bad-40f1-87c6-60028848b230">
 
+## Add a new slave node to Jenkins master node
+
+Jenkins - Manage Jenkins - Nodes - New node
+
+![image](https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/7e3484f8-befc-434a-8414-c7237dc65e9f)
+
 Jenkins Installation is Successful. You can now starting using the Jenkins
 
 <img width="990" alt="215961440-3f13f82b-61a2-4117-88bc-0da265a67fa7" src="https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/ef0e59af-6ae4-4433-b081-4f1049aa1ce0">
 
+![image](https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/cdf228fe-ae19-4fb3-a36e-2ad94762bdcb)
+
+SSH to Jenkins slave node and create a new directory
+
+```
+sudo mkdir /opt/jenkins
+sudo chmod 755 /opt/jenkins -R
+```
+
+![image](https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/fcd0f758-16c9-4678-ab57-29585f48b626)
+
+### Create SSH Keygen in slave node
+
+SSH to slave machine and perform below commands
+
+```
+ssh-keygen
+```
+
+copy a id_rsa (privatekey) for adding username with key in Jenkins credentials
+
+copy a id_rsa.pub (publickey) and paste in below location of same slave node
+
+```
+sudo nano .ssh/authorized_keys
+copy/paste the id_rsa.pub key here
+save and exit
+```
+
+![image](https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/246e17ac-69ce-46af-ab62-583ec7413cd1)
+
+### Jenkins console
+
+![image](https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/3ccd35eb-0633-4b26-90c1-bf77812cfdbf)
+
+![image](https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/9e7d8564-1491-46b3-ae7d-16a8f4eb98ee)
+
+Enter username - ubuntu
+Enter privatekey directly
+
+![image](https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/87180aa9-e0a3-4f0d-a8f0-c5a418c23ffc)
