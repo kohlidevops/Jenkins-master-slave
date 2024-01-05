@@ -104,3 +104,7 @@ Enter username - ubuntu
 Enter privatekey directly
 
 ![image](https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/87180aa9-e0a3-4f0d-a8f0-c5a418c23ffc)
+
+![image](https://github.com/kohlidevops/Jenkins-master-slave/assets/100069489/d6f1cc77-f4db-42e0-a129-58bf6a846838)
+
+Then save it.
